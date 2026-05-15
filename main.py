@@ -41,7 +41,7 @@ def login(usuario: Usuario):
     return {"mensaje": f"Bienvenido {nombre}", "saldo":usuarios_db[nombre]["saldo"]}
 
 @app.post("/transaccion")
-def transaccion(trasaccion: Transaccion):
+def login(trasaccion: Transaccion):
     nombre = trasaccion.username.lower()
     monto = trasaccion.monto
     tipo = trasaccion.tipo
