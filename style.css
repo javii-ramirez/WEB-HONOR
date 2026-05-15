@@ -1,0 +1,25 @@
+body {
+    background-color: #bd0000; 
+}
+
+.card {
+    margin-top: 50px;
+}
+
+.form-control::placeholder {
+    color: #adb5bd; 
+    font-style: italic; 
+}
+
+#total {
+    padding: 1em;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    background-color: #D71313;
+}
+
+.bg-gray {
+    background-color: #d713137a;
+    color: white;
+}

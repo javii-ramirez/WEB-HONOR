@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankmoni</title>
+    <link rel="icon" href="./imagenes/logoBank.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card bg-body shadow" style="width: 18rem;">
+        <div class="text-center" id="sectionLogo">
+            <img src="./imagenes/logoBank.png" style="width: 130px;" alt="logo">
+            <h4 class="">Bankmoni</h4>
+        </div>
+        <div class="card-body">
+            <button onclick="cambiarTema()" class="btn rounded-fill"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
+            <div id="sectionLogin">
+                <p class="card-text">Por favor ingrese sus datos</p>
+                <label>Usuario</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                    <input id="user-name" type="text" class="form-control" placeholder="Ingrese nombre de usuario">
+                </div>
+                <label>Password</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                    <input id="user-password" type="password" class="form-control" placeholder="Ingrese contraseña" maxlength="4" inputmode="numeric">
+                </div>
+                <a id="btnLogin" href="#" class="btn btn-danger">Acceso</a>
+                <p class="mt-3 mb-0" style="font-size:0.85rem;">¿No tienes cuenta? <a href="#" id="irARegistro">Regístrate aquí</a></p>            
+            </div>
+
+            <div id="sectionRegister">
+                <h4 class="text-center">Registrar</h4>
+                <p class="card-text">Crear cuenta nueva</p>
+                <label>Usuario</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text"><i class="bi bi-person-plus-fill"></i></div>
+                    <input id="reg-user" type="text" class="form-control" placeholder="Ingrese nombre de usuario">
+                </div>
+                <label>PIN (4 dígitos)</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                    <input id="reg-pin" type="password" class="form-control" placeholder="Ej: 4782" maxlength="4" inputmode="numeric">
+                </div>
+                <a id="btnRegister" href="#" class="btn btn-danger">Crear cuenta</a>
+                <p class="mt-3 mb-0" style="font-size:0.85rem;">¿Ya tienes cuenta? <a href="#" id="irALogin">Inicia sesión</a></p>
+            </div>
+
+            <br>
+
+            <div id="sectionOperacion">
+                <div id="seccionOperacion">
+                    <p class="card-text">Ingrese operación a realizar</p>
+                    <p id="total">Saldo actual: $<span id="saldo">0</span></p>
+                    <p class="text-center" id="uf">En UF: <span id="saldo-uf">0</span> UF</p>
+                    <br>
+
+                    <label for="seleccion-operacion">Elegir operacion</label>
+                    <select id="seleccion-operacion" class="form-select">
+                        <option value="1">Deposito</option>
+                        <option value="2">Retiro</option>
+                    </select>
+
+                    <br>
+                    <div class="input-group mb-3">
+                        <div class="input-group-text"><i class="bi bi-cash"></i></div>
+                        <input id="user-monto" type="text" class="form-control" placeholder="Ingrese monto">
+                    </div>
+                    <a href="#" id="btnEjecucion" class="btn btn-danger">Realizar operación</a>
+                    <a href="#" id="btnsalir" class="btn btn-danger">Salir</a>
+                </div>
+            </div>
+            
+        
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
